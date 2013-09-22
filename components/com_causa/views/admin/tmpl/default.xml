@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Administrador">
+		<message>
+			<![CDATA[STANDARD HOME LAYOUT DESC]]>
+		</message>
+	</layout>
+	<state>
+		<name>Admin</name>
+		<description>Ingreso al sistema Admin</description>
+	</state>
+</metadata>

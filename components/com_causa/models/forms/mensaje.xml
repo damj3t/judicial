@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/components/com_causa/models/rules"
+>
+        <fieldset name="details">
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" required="true"
+                        readonly="true" class="readonly" />
+	
+		<field 			name="tel" 
+						type="text" 
+						default="" 
+						label="JGLOBAL_FIELD_TEL_LABEL" 
+						description="JFIELD_RUC_DESC" 
+                		class="inputbox"
+                		size="15"
+                		required="true"
+						 />
+						
+		<field 			name="msg" 
+						type="textarea" 
+						default="" 
+						label="JGLOBAL_FIELD_MSG_LABEL" 
+						description="JFIELD_RUC_DESC" 
+                		rows="10" 
+						cols="5"
+                		required="true" />
+		
+		<field 			name="nombre" 
+						type="text" 
+						default="" 
+						label="JGLOBAL_FIELD_NOMBRE_LABEL" 
+						description="JFIELD_RUC_DESC" 
+                		class="inputbox"
+                		size="15"
+                		required="true" />
+		</fieldset>	 
+</form>

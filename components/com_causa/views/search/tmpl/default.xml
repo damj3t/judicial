@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_ABOOK_SEARCH_VIEW_DEFAULT_TITLE">
+		<message>
+			<![CDATA[COM_SEARCH_SEARCH_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+	<fields name="params">
+		<fieldset name="basic" label="COM_ABOOK_SEARCH_OPTIONS"
+			addfieldpath="/administrator/components/com_abook/models/fields">
+		<field
+			name="catid"
+			type="category"
+                        description="COM_ABOOK_FIELD_CATEGORY_DESC"
+                        extension="com_abook"
+			show_root="true"
+                        label="COM_ABOOK_FIELD_CATEGORY_LABEL"
+                />
+		<field
+                        name="show_search_cat"
+                        type="list"
+                        label="COM_ABOOK_CATEGORY"
+                        description="COM_ABOOK_TIPS_SEARCH_FIELD"
+                >
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="0">JHIDE</option>
+                        <option value="1">JSHOW</option>
+                </field>
+                <field
+                        name="show_search_auth"
+                        type="list"
+                        label="COM_ABOOK_AUTHOR"
+                        description="COM_ABOOK_TIPS_SEARCH_FIELD"
+                >
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="0">JHIDE</option>
+                        <option value="1">JSHOW</option>
+                </field>
+		<field
+                        name="show_search_editor"
+                        type="list"
+                        label="COM_ABOOK_EDITOR"
+                        description="COM_ABOOK_TIPS_SEARCH_FIELD"
+                >
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="0">JHIDE</option>
+                        <option value="1">JSHOW</option>
+                </field>
+                <field
+                        name="show_search_lib"
+                        type="list"
+                        label="COM_ABOOK_LIBRARY"
+                        description="COM_ABOOK_TIPS_SEARCH_FIELD"
+                >
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="0">JHIDE</option>
+                        <option value="1">JSHOW</option>
+                </field>
+                <field
+                        name="show_search_loc"
+                        type="list"
+                        label="COM_ABOOK_LOCATION"
+                        description="COM_ABOOK_TIPS_SEARCH_FIELD"
+                >
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="0">JHIDE</option>
+                        <option value="1">JSHOW</option>
+                </field>
+                <field
+                        name="show_search_year"
+                        type="list"
+                        label="COM_ABOOK_YEAR"
+                        description="COM_ABOOK_TIPS_SEARCH_FIELD"
+                >
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+                        <option value="1">JSHOW</option>
+		</field>
+		<field
+                                name="search_display_order"
+                                type="list"
+                                label="COM_ABOOK_BOOKS_ORDER"
+                                description="COM_ABOOK_TIPS_BOOKS_ORDER"
+                        >
+                                <option value="">JGLOBAL_USE_GLOBAL</option>
+                                <option value="title">COM_ABOOK_TITLE</option>
+                                <option value="dateinsert">JGLOBAL_MOST_RECENT_FIRST</option>
+                                <option value="ordering">JGLOBAL_ARTICLE_MANAGER_ORDER</option>
+                        </field>
+		<field
+                                name="search_display_order_dir"
+                                type="list"
+                                label="COM_ABOOK_BOOKS_DISPLAY_ORDER_DIR"
+                                description="COM_ABOOK_TIPS_BOOKS_DISPLAY_ORDER_DIR">
+                                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                                <option value="ASC">COM_ABOOK_ASCENDING</option>
+                                <option value="DESC">COM_ABOOK_DESCENDING</option>
+                        </field>
+		</fieldset>
+        </fields>
+
+</metadata>

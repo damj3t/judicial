@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_causa/models/rules">
+        <fieldset name="details">
+				<field 
+				name="id" 
+				type="text" 
+				default="0" 
+				label="JGLOBAL_FIELD_ID_LABEL" 
+				required="true"
+				readonly="true" 
+				class="readonly" />
+				<field
+				name="nombre"
+				type="text"
+				label="COM_TECNOMED_NOMBRE"
+				description="COM_TECNOMED_NOMBRE_DESC"
+				class="inputbox"
+				size="40"
+				required="true"/>
+				<field
+				name="drogaid"
+				type="sql"
+				multiple="false"
+				size="1"
+				label="JFIELD_DROGA_LABEL"
+				description="JFIELD_DROGA_DESC"
+				query="select id, nombre from #__tm_drogas"
+				key_field="id"
+				value_field="nombre"
+				default="0"
+				required="true"
+				>
+					<option value="">JOPTION_SELECT_ID</option>
+				</field>
+				<field
+				name="dosis"
+				type="text"
+				label="JFIELD_DOSIS_LABEL"
+				description="JFIELD_DOSIS_DESC"
+				class="inputbox"
+				size="40"
+				required="true"/>        	
+				<field
+				name="contenido"
+				type="text"
+				label="JFIELD_CONTENIDO_LABEL"
+				description="JFIELD_CONTENIDO_DESC"
+				class="inputbox"
+				size="40"/>
+				<field
+				name="presentacionid"
+				type="sql"
+				multiple="false"
+				size="1"
+				label="JFIELD_DROGA_LABEL"
+				description="JFIELD_DROGA_DESC"
+				query="select id, nombre from #__tm_presentaciones"
+				key_field="id"
+				value_field="nombre"
+				default="0"
+				required="true"
+				>
+					<option value="">JOPTION_SELECT_ID</option>
+				</field>                	
+				<field
+				name="laboratorioid"
+				type="sql"
+				multiple="false"
+				size="1"
+				label="JFIELD_DROGA_LABEL"
+				description="JFIELD_DROGA_DESC"
+				query="select id, nombre from #__tm_laboratorios"
+				key_field="id"
+				value_field="nombre"
+				default="0"
+				required="true"
+				>
+					<option value="">JOPTION_SELECT_ID</option>
+				</field>         	
+				<field 
+				name="state" 
+				type="list"
+				label="JSTATUS" 
+				description="COM_TECNOMED_FIELD_STATE_DESC"
+				class="inputbox" 
+				size="1" 
+				default="1" >
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+				<option value="2">JARCHIVED</option>
+				<option value="-2">JTRASHED</option>
+				</field>
+		</fieldset>
+</form>

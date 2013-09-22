@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/components/com_causa/models/rules"
+>
+        <fieldset name="details">
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" required="true"
+                        readonly="true" class="readonly" />
+		<field
+                	name="rut"
+ 					type="text"
+                	label="JFIELD_RUT_LABEL"
+                	description="JFIELD_RUT_DESC"
+                	class="inputbox validate-rut"
+                	validate="rut"
+                	size="15"
+                	default="1-9"
+                	required="true"/>
+		<field
+                	name="nombre"
+ 					type="text"
+                	label="JFIELD_NOMBRE_LABEL"
+                	description="JFIELD_NOMBRE_DESC"
+                	class="inputbox"
+                	size="40"
+                	required="true"/>
+
+		<field
+	                name="direccion"
+        	        type="text"
+	                label="JFIELD_DIRECCION_LABEL"
+        	        description="JFIELD_DIRECCION_DESC"
+                	class="inputbox"
+                	size="40"/>
+		<field
+	                name="telefono"
+        	        type="text"
+	                label="JFIELD_TELEFONO_LABEL"
+        	        description="JFIELD_TELEFONO_DESC"
+                	class="inputbox"
+                	size="40"
+                	required="true"/>
+        <field
+	                name="celular"
+        	        type="text"
+	                label="JFIELD_CELULAR_LABEL"
+        	        description="JFIELD_CELULAR_DESC"
+                	class="inputbox"
+                	size="40"
+                	required="false"/>
+		<field
+	                name="email"
+        	        type="text"
+	                label="JFIELD_EMAIL_LABEL"
+        	        description="JFIELD_EMAIL_DESC"
+                	class="inputbox"
+                	size="40"
+                	required="false"/>
+
+                	
+	           <field
+                        name="id_user"
+                        type="usuario"
+                        extension="com_causa"
+                        class="inputbox hidden"
+                        hidden="true"
+                        label="JFIELD_ABOGADO_LABEL"
+                        description="JFIELD_ABOGADO_DESC"
+                        required="true"
+                 >  
+                </field> 
+		<field
+		            name="id_ciudad"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_CIUDAD_LABEL"
+		            description="JFIELD_CIUDAD_LABEL"
+		            query="select cod_item id, desc_item nombre from #__sico_paramet WHERE cod_grupo = 1 and cod_item > 0 and state =1 "
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="false"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>  
+    	          	
+   	
+        <field name="state" type="list"
+			label="JSTATUS" description="COM_CAUSA_FIELD_STATE_DESC"
+			class="inputbox" size="1" default="1" >
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		
+
+		</fieldset>
+		 <fieldset name="images">
+					<field name="image"
+                        type="media"
+						directory="clientes"
+                        hide_none="1"
+                        label="COM_CAUSA_FIELD_PARAMS_IMAGE_LABEL"
+                        description="COM_CAUSA_FIELD_PARAMS_IMAGE_DESC"
+                        />
+	</fieldset>
+</form>

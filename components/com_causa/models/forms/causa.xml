@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/components/com_causa/models/rules"
+>		
+<fieldset name="materia">
+				<field
+		            name="id_materia"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_MATERIA_LABEL"
+		            description="JFIELD_MATERIA_DESC"
+		            query="select cod_item id, desc_item nombre from #__sico_paramet where cod_grupo = 11 and cod_item > 0"
+		            key_field="id"
+		            value_field="nombre"
+		            default="1"
+					required="true"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>
+</fieldset>
+
+<fieldset name="termino">
+				<field
+		            name="id_causal_termino"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_CAUSAL_TERMINO_LABEL"
+		            description="JFIELD_CAUSAL_TERMINO_DESC"
+		            query="select cod_item id, desc_item nombre from #__sico_paramet where cod_grupo = 8 and cod_item > 0"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="false"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>
+		<field 		name="fecha_termino" 
+					type="calendar"
+					label="JFIELD_FECHA_TERMINO_LABEL" 
+					description="JFIELD_FECHA_TERMINO_LABEL"
+					class="inputbox" 
+					size="20" 
+					required="false"
+					format="%d-%m-%Y" 
+					filter="user_utc" />
+					
+		<field 	name="salida_alternativa" 
+					type="textarea" 
+					label="JFIELD_SALIDA_ALTERNATIVA_LABEL" 
+					description="JFIELD_SALIDA_ALTERNATIVA_DESC" 
+					rows="10" 
+					cols="5" />
+					
+		        
+</fieldset>
+        <fieldset name="details">
+		<field 
+					name="id" 
+					type="text" 
+					default="0" 
+					label="JGLOBAL_FIELD_ID_LABEL" 
+					required="true"
+			        readonly="true" 
+			        class="readonly" />
+		<field
+		            name="id_cliente"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_CLIENTE_LABEL"
+		            description="JFIELD_CLIENTE_DESC"
+		            query="select id, nombre from #__sico_clientes"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="true"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>
+		<field
+                	name="descripcion"
+ 					type="text"
+                	label="JFIELD_SUBMATERIA_LABEL"
+                	description="JFIELD_SUBMATERIA_DESC"
+                	class="inputbox"
+                	size="20"
+                	required="true"/>
+         
+		<field
+		            name="id_procedimiento"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_PROCEDIMIENTO_LABEL"
+		            description="JFIELD_PROCEDIMIENTO_DESC"
+		            query="select cod_item id, desc_item nombre from #__sico_paramet where cod_grupo = 6 and cod_item > 0"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="false"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>
+		 <field
+		            name="id_estado_procesal"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_ESTADO_PROCESAL_LABEL"
+		            description="JFIELD_ESTADO_PROCESAL_DESC"
+		            query="select cod_item id, desc_item nombre from #__sico_paramet where cod_grupo = 7 and cod_item > 0"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="false"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field> 
+		 <field
+		            name="id_tribunal"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_TRIBUNAL_LABEL"
+		            description="JFIELD_TRIBUNAL_DESC"
+		            query="select cod_item id, desc_item nombre from #__sico_paramet where cod_grupo = 14 and cod_item > 0"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="true"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>   
+	        	
+		<field
+                	name="rit"
+ 					type="text"
+                	label="JFIELD_RIT_LABEL"
+                	description="JFIELD_RIT_DESC"
+                	class="inputbox"
+                	size="15"
+                	required="true"/>
+		<field
+                	name="ruc"
+ 					type="text"
+                	label="JFIELD_RUC_LABEL"
+                 	description="JFIELD_RUC_DESC" 
+                	class="inputbox"
+                	size="15"
+                	required="true"/>
+	<field
+		            name="id_fiscal"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_FISCAL_LABEL"
+		            description="JFIELD_FISCAL_DESC"
+		            query="select id, nombre from #__sico_abogados where id_tipo in(2)"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="false"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>
+ 		<field
+		            name="id_fiscal_adj"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_FISCAL_ADJ_LABEL"
+		            description="JFIELD_FISCAL_ADJ_DESC"
+		            query="select id, nombre from #__sico_abogados where id_tipo =3"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="false"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		</field>		        
+	           <field
+                        name="id_user"
+                        type="usuario"
+                        extension="com_causa"
+                        class="inputbox hidden"
+                        hidden ="true"
+                        label="JFIELD_ABOGADO_LABEL"
+                        description="JFIELD_ABOGADO_DESC"
+                        required="true"
+                 >  
+                </field> 
+
+<field
+		            name="state"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JSTATUS"
+		            description="COM_CAUSA_FIELD_STATE_DESC"
+		            query="select cod_item id, desc_item nombre from #__sico_paramet where cod_grupo = 3 and cod_item > 0"
+		            key_field="id"
+		            value_field="nombre"
+		            default="2"
+					required="true"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field> 
+		        
+
+</fieldset>
+    <fieldset name="preparatoria">           	
+ 	<field 		name="fecha_preparatoria" 
+					type="calendar"
+					label="JFIELD_FECHA_PREPARATORIA_LABEL" 
+					description="JFIELD_FECHA_PREPARATORIA_LABEL"
+					class="inputbox" 
+					size="20" 
+					required="false"
+					format="%Y-%m-%d" 
+					filter="user_utc" />
+	 <field
+	                name="hora_preparatoria"
+        	        type="list"
+	                label="JFIELD_HORA_PREPARATORIA_LABEL"
+        	        description="JFIELD_HORA_PREPARATORIA_DESC"
+                	class="inputbox"
+                	required="false"
+                	size="1"
+                	default="07:00">
+					<option value="07:00">07:00</option>
+					<option value="08:00">08:00</option>
+					<option value="09:00">09:00</option>
+					<option value="10:00">10:00</option>
+					<option value="11:00">11:00</option>
+					<option value="12:00">12:00</option>
+					<option value="13:00">13:00</option>
+					<option value="14:00">14:00</option>
+					<option value="15:00">15:00</option>
+					<option value="16:00">16:00</option>
+					<option value="17:00">17:00</option>
+					<option value="18:00">18:00</option>
+					<option value="19:00">19:00</option>
+					<option value="20:00">20:00</option>
+					<option value="21:00">21:00</option>
+					<option value="22:00">22:00</option>
+					</field>
+					<field
+		            name="edificio_preparatoria"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_EDIFICIO_LABEL"
+		            description="JFIELD_EDIFICIO_DESC"
+		            query="select cod_item id, desc_item nombre from #__sico_paramet where cod_grupo = 13 and cod_item > 0"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="false"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>
+		        
+		        <field
+		            name="sala_preparatoria"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_SALA_LABEL"
+		            description="JFIELD_SALA_DESC"
+		            query="select cod_item id, desc_item nombre from #__sico_paramet where cod_grupo = 12 and cod_item > 0"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="false"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>	
+  </fieldset>
+  <fieldset name="juicio">					     
+       <field 		name="fecha_juicio" 
+					type="calendar"
+					label="JFIELD_FECHA_JUICIO_LABEL" 
+					description="JFIELD_FECHA_JUICIO_LABEL"
+					class="inputbox" 
+					size="20" 
+					required="false"
+					format="%Y-%m-%d" 
+					filter="user_utc" />
+					
+		<field 		name="hora_juicio" 
+					type="text"
+					label="JFIELD_HORA_JUICIO_LABEL" 
+					description="JFIELD_HORA_JUICIO_LABEL"
+					class="inputbox" 
+					size="5" 
+					required="false"
+					format="HH:MM" 
+					 />   
+					 <field
+	                name="hora_juicio"
+        	        type="list"
+	                label="JFIELD_HORA_JUICIO_LABEL"
+        	        description="JFIELD_HORA_JUICIO_DESC"
+                	class="inputbox"
+                	required="false"
+                	size="1"
+                	default="07:00">
+					<option value="07:00">07:00</option>
+					<option value="08:00">08:00</option>
+					<option value="09:00">09:00</option>
+					<option value="10:00">10:00</option>
+					<option value="11:00">11:00</option>
+					<option value="12:00">12:00</option>
+					<option value="13:00">13:00</option>
+					<option value="14:00">14:00</option>
+					<option value="15:00">15:00</option>
+					<option value="16:00">16:00</option>
+					<option value="17:00">17:00</option>
+					<option value="18:00">18:00</option>
+					<option value="19:00">19:00</option>
+					<option value="20:00">20:00</option>
+					<option value="21:00">21:00</option>
+					<option value="22:00">22:00</option>
+					</field>
+					<field
+		            name="edificio_juicio"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_EDIFICIO_LABEL"
+		            description="JFIELD_EDIFICIO_DESC"
+		            query="select cod_item id, desc_item nombre from #__sico_paramet where cod_grupo = 13 and cod_item > 0"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="false"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>
+		        
+		        <field
+		            name="sala_juicio"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_SALA_LABEL"
+		            description="JFIELD_SALA_DESC"
+		            query="select cod_item id, desc_item nombre from #__sico_paramet where cod_grupo = 12 and cod_item > 0"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="false"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>	    
+  </fieldset>
+</form>

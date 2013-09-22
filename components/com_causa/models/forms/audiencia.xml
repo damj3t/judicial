@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/components/com_causa/models/rules"
+>
+        <fieldset name="details">
+		<field 			name="id" 
+						type="text" 
+						default="0" 
+						label="JGLOBAL_FIELD_ID_LABEL" 
+						required="true"
+                        readonly="true" 
+						class="readonly" />
+
+	 <field
+                        name="id_causa"
+                        type="causa"
+                        extension="com_causa"
+                        class="inputbox"
+                        default=""
+                        label="JFIELD_CAUSA_LABEL"
+                        description="JFIELD_CAUSA_DESC"
+                        required="true"
+                >  
+                        <option value="0">JOPTION_SELECT_CATEGORY</option>
+                </field>
+	<field 		name="fecha_audiencia" 
+					type="calendar"
+					label="JFIELD_FECHA_DESDE_LABEL" 
+					description="JFIELD_FECHA_DESDE_DESC"
+					class="inputbox" 
+					size="20" 
+					required="true"
+					format="%Y-%m-%d" 
+					filter="user_utc" />
+	<field
+		            name="edificio"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_EDIFICIO_LABEL"
+		            description="JFIELD_EDIFICIO_DESC"
+		            query="select cod_item id, desc_item nombre from #__sico_paramet where cod_grupo = 13 and cod_item > 0"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="true"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>
+		        
+		        <field
+		            name="sala"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_SALA_LABEL"
+		            description="JFIELD_SALA_DESC"
+		            query="select cod_item id, desc_item nombre from #__sico_paramet where cod_grupo = 12 and cod_item > 0"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="true"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>
+					
+	<field
+	                name="hora"
+        	        type="list"
+	                label="JFIELD_HORA_LABEL"
+        	        description="JFIELD_HORA_DESC"
+                	class="inputbox"
+                	required="true"
+                	size="1"
+                	default="07:00">
+					<option value="07:00">07:00</option>
+					<option value="08:00">08:00</option>
+					<option value="09:00">09:00</option>
+					<option value="10:00">10:00</option>
+					<option value="11:00">11:00</option>
+					<option value="12:00">12:00</option>
+					<option value="13:00">13:00</option>
+					<option value="14:00">14:00</option>
+					<option value="15:00">15:00</option>
+					<option value="16:00">16:00</option>
+					<option value="17:00">17:00</option>
+					<option value="18:00">18:00</option>
+					<option value="19:00">19:00</option>
+					<option value="20:00">20:00</option>
+					<option value="21:00">21:00</option>
+					<option value="22:00">22:00</option>
+					
+					</field>						        
+	<field
+                	name="motivo"
+ 					type="textarea"
+                	label="JFIELD_MOTIVO_LABEL"
+                	description="JFIELD_MOTIVO_DESC"
+                	rows="5" 
+					cols="5"
+                	required="false"/>
+                	
+
+        <field name="state" type="list"
+			label="JSTATUS" description="COM_CAUSA_FIELD_STATE_DESC"
+			class="inputbox" size="1" default="1" >
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		
+
+		</fieldset>
+		 
+</form>

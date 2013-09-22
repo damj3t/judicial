@@ -1,0 +1,189 @@
+/**
+ * @package Joomla
+ * @subpackage Causa
+ * @copyright (C) 2013 Alex Olave
+ */
+body{
+  padding-top: 60px;
+}
+
+hr.separator {
+        border-style:dotted none none none;
+}
+
+.booksearch{
+	background: url('../assets/images/find.png') no-repeat;
+	text-indent: 22px;
+	float: right;
+	height: 22px;
+}
+
+.bookheader{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+li.folder {
+	list-style-type: none;
+}
+
+.cat-children {
+	border-bottom: 1px dotted #000;
+}
+
+.books {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.books td {
+	border-bottom: 1px dotted #000;
+	padding:5px;
+}
+
+.books td a{
+        text-decoration: none;
+}
+
+tr.odd:hover, tr.even:hover {
+	background: #dedede;
+}
+
+.cat-image{
+	width: 100px;
+	float: left;
+	margin: 0px 10px 10px 0px;
+}
+
+.cat-img-folder {
+	width: 48px;
+	height: 48px;
+}
+
+.field-search {
+	float:right;
+}
+
+.clr{
+        clear:both;
+}
+
+.abook-path{
+	margin-bottom: 10px;
+}
+
+.taggroup {
+	float: left;
+	margin: 0px 15px;
+	border-bottom: 1px solid #000;
+	width: 180px;
+	padding: 0px;
+}
+
+.taggroup h3 {
+        font-weight: bold;
+        border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	width: 100%;
+	padding: 2px 0px;
+}
+table.booktab {
+	border:none;
+}
+
+table.bookdetails {
+	border-collapse: collapse;
+}
+
+table.bookdetails td{
+        border-top: 1px dotted #dedede;
+	border-bottom: 1px dotted #dedede;
+}
+.book-title {
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+.book-subtitle {
+        font-size: 0.8em;
+	font-style: italic;
+}
+
+.abook_category_desc {
+	margin-bottom: 10px;
+}
+/*------------------------------------------*/
+/*scheda libro*/
+div.booktab {
+        border:none;
+	margin-top: 10px;
+}
+div.cover {
+	float: left;
+	width: 80px;
+	height: 112px;
+	margin: 0px 5px 5px 0px;
+}
+
+div.bookdetails {
+	float: left;
+	width: 80%;
+}
+
+div.bookdetails div{
+        clear: both;
+	padding: 3px;
+	border-top: 1px solid #dedede;
+}
+
+div.bookdetails div label{
+        font-weight: bold;
+}
+
+div.best {
+	clear: both;
+	width: 100%;
+	padding: 5px 0px;
+	border-top: 1px solid #dedede;
+}
+div.bookhits {
+        float: left;
+        width: 20%;
+}
+
+div.bookrating {
+        float: left;
+        width: 30%;
+}
+
+div.bookrating .content_rating {
+	font-weight: bold;
+}
+
+div.description {
+	border-top: 1px solid #dedede;
+	clear: both;
+        width: 100%;
+}
+div.createdate {
+	width: 100%;
+	clear: both;
+	border-top: 1px solid #dedede;
+}
+/*----------------------------------*/
+/*form serach */
+.abook_search_params p {
+        float: left;
+        margin-right: 10px;
+}
+
+.abook_search_params p label {
+        margin-right: 5px;
+}
+.result {
+	margin: 10px 0px;
+}
+.search-button {
+	text-align: center;
+}
+/*----------------------*/

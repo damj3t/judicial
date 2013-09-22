@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+        <fieldset name="details">
+		<field 
+					name="id" 
+					type="text" 
+					default="0" 
+					label="JGLOBAL_FIELD_ID_LABEL" 
+					required="true"
+			        readonly="true" 
+			        class="readonly" />
+      	<field
+		            name="cod_grupo"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_GRUPO_LABEL"
+		            description="JFIELD_GRUPO_DESC"
+		            query="select cod_grupo id, desc_item  from #__sico_paramet where cod_item =0 ORDER BY desc_item"
+		            key_field="id"
+		            value_field="desc_item"
+		            default="0"
+					required="true">
+		                <option value="">JOPTION_SELECT_ID</option>
+		</field>
+                	
+		<field
+                	name="cod_item"
+ 					type="text"
+                	label="JFIELD_CODIGO_LABEL"
+                	description="JFIELD_CODIGO_DESC"
+                	class="inputbox"
+                	size="15"
+                	required="true"/>
+               	
+		<field
+                	name="cod_item2"
+ 					type="text"
+                	label="JFIELD_CODIGO_2_LABEL"
+                	description="JFIELD_CODIGO_2_DESC"
+                	class="inputbox"
+                	size="15"
+                	required="false"/>
+                	
+				<field
+                	name="desc_item"
+ 					type="text"
+                	label="JFIELD_DESCITEM_LABEL"
+                	description="JFIELD_DESCITEM_DESC"
+                	class="inputbox"
+                	size="40"
+                	required="true"/>
+					
+            <field 
+            name="state" 
+            type="list"
+			label="JSTATUS" 
+			description="JSTATUS"
+			class="inputbox" 
+			size="1" 
+			default="1" >
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		</fieldset>
+</form>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/components/com_causa/models/rules">
+		<fieldset name="details">
+				<field 
+				name="id" 
+				type="text" 
+				default="0" 
+				label="JGLOBAL_FIELD_ID_LABEL" 
+				required="true"
+				readonly="true" 
+				class="readonly" />
+				<field
+				name="fecha"
+				type="text"
+				label="COM_TECNOMED_FECHA"
+				description="COM_TECNOMED_FECHA_DESC"
+				class="inputbox"
+				size="20"
+				readonly="true" 
+				required="true"/>
+				<field
+				name="hora"
+				type="text"
+				label="COM_TECNOMED_HORA"
+				description="COM_TECNOMED_HORA_DESC"
+				class="inputbox"
+				size="10"
+				readonly="true" 
+				required="true"/>
+				<field
+				name="profesional_id"
+				type="sql"
+				multiple="false"
+				size="1"
+				label="JFIELD_PROFESIONAL_LABEL"
+				description="JFIELD_PROFESIONAL_DESC"
+				query="select id, nombre from #__tm_profesionales ORDER BY nombre"
+				key_field="id"
+				value_field="nombre"
+				default="0"
+				readonly="true" 
+				required="true"
+				>
+					<option value="">JOPTION_SELECT_ID</option>
+				</field>
+				<field
+				name="paciente_id"
+				type="sql"
+				multiple="false"
+				size="1"
+				label="JFIELD_PACIENTE_LABEL"
+				description="JFIELD_PACIENTE_DESC"
+				query="select id, nombre from #__tm_pacientes ORDER BY nombre"
+				key_field="id"
+				value_field="nombre"
+				default="0"
+				required="false"
+				>
+					<option value="">JOPTION_SELECT_ID</option>
+				</field>
+				<field
+				name="tipo_atencion_id"
+				type="sql"
+				multiple="false"
+				size="1"
+				label="JFIELD_TIPO_VISITA_LABEL"
+				description="COM_TECNOMED_FIELD_TIPO_ATENCION_DESC"
+				query="select cod_item id, desc_item nombre  from #__tm_paramet where cod_grupo = 204 AND cod_item >0"
+				key_field="id"
+				value_field="nombre"
+				default="1"
+				required="false"
+				>
+					<option value="">JOPTION_SELECT_ID</option>
+				</field>
+				<field
+				name="estado"
+				type="sql"
+				multiple="false"
+				size="1"
+				label="JSTATUS"
+				description="COM_TECNOMED_FIELD_STATE_DESC"
+				query="select id, estado nombre from #__tm_estados WHERE id = 2"
+				key_field="id"
+				value_field="nombre"
+				default="2"
+				required="false"
+				>
+				<option value="">JOPTION_SELECT_ID</option>
+				</field>
+				
+		</fieldset>
+</form>

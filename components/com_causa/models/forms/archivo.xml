@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/components/com_causa/models/rules"
+>
+        <fieldset name="details">
+		<field 			name="id" 
+						type="text" 
+						default="0" 
+						label="JGLOBAL_FIELD_ID_LABEL" 
+						required="true"
+                        readonly="true" 
+						class="readonly" />
+	         <field
+                        name="id_causa"
+                        type="causa"
+                        extension="com_causa"
+                        class="inputbox"
+                        default=""
+                        label="JFIELD_CAUSA_LABEL"
+                        description="JFIELD_CAUSA_DESC"
+                        required="true"
+                >  
+                </field>
+				<field
+		            name="id_tipo_documento"
+		            type="sql"
+		            multiple="false"
+		            size="1"
+		            label="JFIELD_TIPO_DOC_LABEL"
+		            description="JFIELD_TIPO_DOC_DESC"
+		            query="select cod_item as id , desc_item as nombre from #__sico_paramet	where cod_grupo = 2 and cod_item > 0"
+		            key_field="id"
+		            value_field="nombre"
+		            default="0"
+					required="true"
+		            >
+		                <option value="">JOPTION_SELECT_ID</option>
+		        </field>
+		<field
+                	name="nombre_doc"
+ 					type="text"
+                	label="JFIELD_NOMBRE_LABEL"
+                	description="JFIELD_NOMBRE_DESC"
+                	class="inputbox"
+                	size="40"
+                	required="true"/>
+       <field
+                	name="extracto"
+ 					type="textarea"
+                	label="JFIELD_EXTRACTO_LABEL"
+                	description="JFIELD_EXTRACTO_DESC"
+                	rows="10" 
+					cols="5"
+                	required="false"/>
+
+
+    	          	
+   	
+        <field name="state" type="list"
+			label="JSTATUS" description="COM_TECNOMED_FIELD_STATE_DESC"
+			class="inputbox" size="1" default="1" >
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+			           <field
+                        name="id_user"
+                        type="usuario"
+                        extension="com_causa"
+                        class="inputbox hidden"
+                        hidden ="true"
+                        label="JFIELD_ABOGADO_LABEL"
+                        description="JFIELD_ABOGADO_DESC"
+                        required="true"
+                 >  
+                </field> 
+
+		</fieldset>
+		 
+</form>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install method="upgrade" type="component" version="1.6.0">
+        <name>Causa</name>
+        <creationDate>2013-04-19</creationDate>
+        <author>Alex olave</author>
+        <authorEmail>damj3t@gmail.com</authorEmail>
+        <authorUrl>http://www.alfazeta.cl</authorUrl>
+        <copyright>Copyright Alex olave</copyright>
+        <license>License</license>
+        <version>1.0.0</version>
+        <description>COM_CAUSAS_DESC</description>
+        <files folder="site">
+                <filename>controller.php</filename>
+                <filename>causa.php</filename>
+                <filename>index.html</filename>
+                <filename>router.php</filename>
+                <folder>helpers</folder>
+                <folder>controllers</folder>
+                <folder>models</folder>
+                <folder>views</folder>
+                <folder>assets</folder>
+		<folder>language</folder>
+        </files>
+        <languages folder="site">
+                <language tag="es-ES">language/es-ES/es-ES.com_causa.ini</language>
+        </languages>
+        <params>
+                <param name="img_path" default="causa" />
+                <param name="linkto" default="1" />
+                <param name="emptycat" default="1" />
+                <param name="catimage" default="folder_yellow.png" />
+                <param name="categorypagination" default="20" />
+                <param name="causapagination" default="10" />
+                <param name="view_rate" default="1" />
+                <param name="display_order" default="title" />
+                <param name="view_date" default="1" />
+                <param name="show_icons" default="1" />
+                <param name="show_pdf_icon" default="1" />
+                <param name="show_print_icon" default="1" />
+        </params>
+        <install>
+                <sql>
+                        <file charset="utf8" driver="mysql">install.sql</file>
+                </sql>
+        </install>
+        <uninstall>
+                <sql>
+                        <file charset="utf8" driver="mysql">uninstall.sql</file>
+                </sql>
+        </uninstall>
+        <administration>
+                <menu img="components/com_causa/images/causa-main.png">COM_CAUSA_MENU</menu>
+                <submenu>
+						<menu link="option=com_causa&amp;view=cpanel" view="cpanel" img="components/com_causa/assets/images/causa-main.png" alt="causa/Control panel">COM_CAUSA_CONTROL_PANEL</menu>
+                </submenu>
+                <files folder="admin">
+                <filename>causa.php</filename>
+						<filename>access.xml</filename>
+                        <filename>index.html</filename>
+                        <filename>install.sql</filename>
+                        <filename>uninstall.sql</filename>
+                        <filename>config.xml</filename>
+                        <filename>controller.php</filename>
+                        <folder>controllers</folder>
+                        <folder>assets</folder>
+                        <folder>models</folder>
+                        <folder>tables</folder>
+                        <folder>views</folder>
+			<folder>helpers</folder>
+			<folder>uploads</folder>
+			<folder>language</folder>
+                </files>
+                <languages folder="admin">
+                        <language tag="es-ES">language/es-ES/es-ES.com_causa.ini</language>
+						<language tag="es-ES">language/es-ES/es-ES.com_causa.sys.ini</language>
+                </languages>
+        </administration>
+</install>

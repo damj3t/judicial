@@ -1,0 +1,57 @@
+/**
+ * @package Joomla
+ * @subpackage Tecnomed
+ * @copyright (C) 2012 Alex Olave 
+ * @license GNU/GPL, see LICENSE.php
+ * EventList is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License 2
+ * as published by the Free Software Foundation.
+
+ * Tecnomed is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU General Public License
+ * along with Tecnomed; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+.icon-48-tecnomed-main { background-image: url(../images/tecnomed-main-48.png); }
+.icon-48-locations  { background-image: url(../images/tecnomed-locations-48.png); }
+.icon-48-authors    { background-image: url(../images/tecnomed-authors-48.png); }
+.icon-48-editors    { background-image: url(../images/tecnomed-editors-48.png); }
+.icon-48-libraries  { background-image: url(../images/tecnomed-libraries-48.png); }
+.icon-48-books      { background-image: url(../images/tecnomed-books-48.png); }
+.icon-48-tecnomed-categories { background-image: url(../images/tecnomed-categories-48.png); }
+.icon-48-tags	    { background-image: url(../images/tecnomed-tags-48.png); }
+.icon-48-taggroups	{ background-image: url(../images/tecnomed-taggroups-48.png); }
+.icon-48-importexport	{ background-image: url(../images/tecnomed-importexport-48.png); }
+
+.icon-48-locationedit  { background-image: url(../images/tecnomed-location-edit-48.png); }
+.icon-48-locationadd  { background-image: url(../images/tecnomed-location-add-48.png); }
+.icon-48-authoredit    { background-image: url(../images/tecnomed-author-edit-48.png); }
+.icon-48-authoradd    { background-image: url(../images/tecnomed-author-add-48.png); }
+.icon-48-editoredit    { background-image: url(../images/tecnomed-editor-edit-48.png); }
+.icon-48-editoradd    { background-image: url(../images/tecnomed-editor-add-48.png); }
+.icon-48-libraryedit  { background-image: url(../images/tecnomed-library-edit-48.png); }
+.icon-48-libraryadd  { background-image: url(../images/tecnomed-library-add-48.png); }
+.icon-48-bookedit      { background-image: url(../images/tecnomed-book-edit-48.png); }
+.icon-48-bookadd      { background-image: url(../images/tecnomed-book-add-48.png); }
+.icon-48-categoryedit { background-image: url(../images/tecnomed-category-edit-48.png);}
+.icon-48-categoryadd { background-image: url(../images/tecnomed-category-add-48.png);}
+.icon-48-tagedit    { background-image: url(../images/tecnomed-tag-edit-48.png); }
+.icon-48-tagadd    { background-image: url(../images/tecnomed-tag-add-48.png); }
+.icon-48-taggroupedit    { background-image: url(../images/tecnomed-taggroup-edit-48.png); }
+.icon-48-taggroupadd    { background-image: url(../images/tecnomed-taggroup-add-48.png); }
+
+.icon-16-tecnomed  { background-image: url(../images/tecnomed-main.png); }
+.icon-16-locations  { background-image: url(../images/tecnomed-locations.png); }
+.icon-16-authors    { background-image: url(../images/tecnomed-authors.png); }
+.icon-16-editors    { background-image: url(../images/tecnomed-editors.png); }
+.icon-16-libraries  { background-image: url(../images/tecnomed-libraries.png); }
+.icon-16-books      { background-image: url(../images/tecnomed-books.png); }
+.icon-16-categories { background-image: url(../images/tecnomed-categories.png); }
+.icon-16-tags	    { background-image: url(../images/tecnomed-tags.png); }
+.icon-16-taggroups	{ background-image: url(../images/tecnomed-taggroups.png); }
+.icon-16-importexport	{ background-image: url(../images/tecnomed-importexport.png); }
+
